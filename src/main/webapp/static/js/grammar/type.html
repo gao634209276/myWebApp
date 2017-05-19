@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p> typeof 操作符返回变量、对象、函数、表达式的类型。</p>
+<p id="typeof"></p>
+<script>
+	document.getElementById("typeof").innerHTML =
+		typeof "john" + "<br>" + typeof 3.14 + "<br>" + typeof NaN + "<br>" + typeof false + "<br>" + typeof [1, 2, 3, 4] + "<br>" + typeof {
+			name: 'john',
+			age: 34
+		} + "<br>" + typeof new Date() + "<br>" + typeof function () {
+		} + "<br>" + typeof myCar + "<br>" + typeof null;
+</script>
+
+
+<p>对象可以通过设置为 <b>null</b> 来清空。</p>
+<p id="null"></p>
+<script>
+	var person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"};
+	person = null; // 值为 null(空), 但类型为对象
+	//person = undefined;// 值为 undefined, 类型为 undefined
+	document.getElementById("null").innerHTML = typeof person;
+</script>
+
+
+<p>变量的值如果不存在则该变量值为 <b>undefined</b>。</p>
+<p id="undefined"></p>
+<script>
+	var person;  // 值为 null(空), 但仍然是一个对象
+	document.getElementById("undefined").innerHTML = person + "<br>" + typeof person;
+</script>
+
+
+<p> constructor 属性返回变量或对象的构造函数。</p>
+<p id="constructor"></p>
+<script>
+	document.getElementById("constructor").innerHTML =
+		"john".constructor + "<br>" +
+		(3.14).constructor + "<br>" +
+		false.constructor + "<br>" +
+		[1, 2, 3, 4].constructor + "<br>" +
+		{name: 'john', age: 34}.constructor + "<br>" +
+		new Date().constructor + "<br>" +
+		function () {
+		}.constructor;
+</script>
+
+<p>判断是否为数组。</p>
+<p id="array"></p>
+<script>
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	document.getElementById("array").innerHTML = isArray(fruits);
+	function isArray(myArray) {
+		return myArray.constructor.toString().indexOf("Array") > -1;
+	}
+</script>
+
+<p> String() 方法可以将数字转换为字符串。</p>
+<p id="string"></p>
+<script>
+	var x = 123;
+	document.getElementById("string").innerHTML =
+		String(x) + "<br>" +
+		String(123) + "<br>" +
+		String(100 + 23);
+</script>
+
+<p>toString() 方法将数字转换为字符串。</p>
+<p id="toString"></p>
+<script>
+	var x = 123;
+	document.getElementById("toString").innerHTML =
+		x.toString() + "<br>" +
+		(123).toString() + "<br>" +
+		(100 + 23).toString();
+</script>
+</body>
+</html>

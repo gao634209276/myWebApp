@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>菜鸟教程(runoob.com)</title>
+	<meta charset="utf-8">
+	<title>菜鸟教程(runoob.com)</title>
 </head>
 <body>
 
@@ -10,12 +10,39 @@
 <button onclick="myFunction()">点击这里</button>
 <p id="demo"></p>
 <script>
-    function myFunction() {
-        y = 5;
-        z = 2;
-        x = y + z;
-        document.getElementById("demo").innerHTML = x;
-    }
+	function myFunction() {
+		y = 5;
+		z = 2;
+		x = y + z;
+		var a = y--;
+		var demoP = document.getElementById("demo");
+		demoP.innerHTML = "x=" + x + ", y=" + y + ", a=" + a;
+	}
+</script>
+
+
+<p>x=5, 返回 x==8 的比较值结果。</p>
+<button onclick="myFunction()">尝试一下</button>
+<p id="demo"></p>
+<script>
+	function myFunction() {
+		var x = 5;
+		document.getElementById("demo").innerHTML = x == 8;
+	}
+</script>
+
+<p>点击按钮检测年龄。</p>
+年龄:<input id="age" value="18"/>
+<p>是否达到投票年龄?</p>
+<button onclick="myFunction()">点击按钮</button>
+<p id="demo2"></p>
+<script>
+	function myFunction() {
+		var age, voteable;
+		age = document.getElementById("age").value;
+		voteable = (age < 18) ? "年龄太小" : "年龄已达到";
+		document.getElementById("demo2").innerHTML = voteable;
+	}
 </script>
 
 </body>
