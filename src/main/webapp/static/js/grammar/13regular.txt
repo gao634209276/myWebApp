@@ -36,7 +36,7 @@ JavaScript 正则表达式
 		var str = "Visit Runoob!";
 		var n = str.search("Runoob");
 
-	replace() 方法使用正则表达式
+replace() 方法使用正则表达式
 实例
 使用正则表达式且不区分大小写将字符串中的 Microsoft 替换为 Runoob :
 var str = document.getElementById("demo").innerHTML; 
