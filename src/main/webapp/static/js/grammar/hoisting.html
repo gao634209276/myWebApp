@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<script>
+	x = 5; // 变量 x 设置为 5
+	elem = document.getElementById("demo"); // 查找元素
+	elem.innerHTML = x;                     // 在元素中显示 x
+	var x; // 声明 x
+</script>
+
+<p id="demo2"></p>
+<script>
+	var x; // 声明 x
+	x = 5; // 变量 x 设置为 5
+	elem = document.getElementById("demo2"); // 查找元素
+	elem.innerHTML = x;
+</script>
+<p id="demo3"></p>
+<script>
+	var x = 5; // 初始化 x
+	var y = 7; // 初始化 y
+	elem = document.getElementById("demo3"); // 查找元素
+	elem.innerHTML = x + " " + y;           // 显示 x 和 y
+</script>
+<p id="demo4"></p>
+<script>
+	var x = 5; // 初始化 x
+	elem = document.getElementById("demo4"); // 查找元素
+	elem.innerHTML = "x 为：" + x + "，y 为：" + y;           // 显示 x 和 y
+	var y = 7; // 初始化 y
+</script>
+
+
+<p>在函数内使用 "use strict" 只在函数内报错。</p>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+	x = 3.14;       // 不报错
+	myFunction();
+	function myFunction() {
+		"use strict";
+		y = 3.14;   // 报错 (y 未定义)
+	}
+</script>
+
+<h1>使用 "use strict":</h1>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+	"use strict";
+	//不允许使用未定义的对象
+	x = {p1: 10, p2: 20};      // 报错 (x 未定义)
+	//不允许删除函数
+	function x(p1, p2) {
+	}
+	//delete x;
+	//不允许使用八进制
+	//var x = 010;             // 报错
+	//不允许使用转义字符。
+	//var x = \010;            // 报错
+	//不允许对只读属性赋值。
+	var obj = {};
+	Object.defineProperty(obj, "x", {value: 0, writable: false});
+	obj.x = 3.14;            // 报错
+	//不允许删除一个不允许删除的属性值。
+	delete Object.prototype; // 报错
+	//变量名不能使用 "arguments" "eval" 字符串。
+	//var arguments = 3.14;    // 报错
+	//var eval = 3.14;         // 报错
+
+
+</script>
+
+<h1>使用 "use strict":</h1>
+<h3>不允许使用以下这种语句。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+	"use strict";
+	//with (Math) {x = cos(2)}; // 报错
+	eval("var x = 2");
+	alert(x);               // 报错
+</script>
+
+<h1>使用 "use strict":</h1>
+<h3>严格模式不允许使用保留关键字。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+	"use strict";
+	//var public = 1500;      // 报错
+</script>
+</body>
+</html>
